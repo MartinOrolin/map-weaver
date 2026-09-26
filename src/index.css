@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 28 20% 12%;
+    --foreground: 40 85% 92%;
+
+    --card: 28 25% 15%;
+    --card-foreground: 40 85% 92%;
+
+    --popover: 28 30% 10%;
+    --popover-foreground: 40 85% 92%;
+
+    --primary: 38 90% 55%;
+    --primary-foreground: 28 20% 12%;
+
+    --secondary: 15 55% 45%;
+    --secondary-foreground: 40 85% 92%;
+
+    --muted: 28 15% 25%;
+    --muted-foreground: 40 45% 70%;
+
+    --accent: 0 65% 50%;
+    --accent-foreground: 40 85% 92%;
+
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 40 85% 92%;
+
+    --border: 28 25% 25%;
+    --input: 28 25% 20%;
+    --ring: 38 90% 55%;
+
+    --radius: 0.5rem;
+
+    /* Custom fantasy theme colors */
+    --parchment: 40 60% 85%;
+    --parchment-dark: 35 45% 70%;
+    --leather: 25 35% 30%;
+    --gold: 38 90% 55%;
+    --gold-glow: 38 100% 65%;
+    --crimson: 0 65% 50%;
+    --crimson-dark: 0 60% 35%;
+    --magic-purple: 270 60% 55%;
+    
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(38 90% 55%) 0%, hsl(38 80% 45%) 100%);
+    --gradient-leather: linear-gradient(180deg, hsl(25 35% 35%) 0%, hsl(25 35% 25%) 100%);
+    --gradient-parchment: linear-gradient(180deg, hsl(40 60% 90%) 0%, hsl(40 60% 80%) 100%);
+    
+    /* Shadows */
+    --shadow-glow: 0 0 20px hsl(38 90% 55% / 0.3);
+    --shadow-deep: 0 10px 30px -5px hsl(0 0% 0% / 0.5);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
